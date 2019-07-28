@@ -1,29 +1,14 @@
 # vuetable2-wrapper
 
-## Project setup
-```
-npm install
-```
+A simple wrapper around vuetable2 that should be sufficient for 80% of use cases.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Bundles css styling, pagination, and pagination info together.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Installation
 
-### Run your tests
 ```
-npm run test
-```
+npm install --save-dev vuetable2-wrapper
 
-### Lints and fixes files
+import VTable from 'vuetable2-wrapper/src/Table'
+Vue.component('v-table', VTable)
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

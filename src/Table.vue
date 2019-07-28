@@ -7,6 +7,8 @@
                   :per-page="perPage"
                   pagination-path=""
                   @vuetable:pagination-data="onPaginationData"
+                  v-on="$listeners"
+                  v-bind="$attrs"
         >
             <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
                 <slot :name="slot" v-bind="scope"/>
@@ -57,6 +59,10 @@
 
             reload() {
                 this.$refs.vuetable.reload();
+            },
+
+            toggleDetailRow(id) {
+                this.$refs.vuetable.toggleDetailRow(id)
             },
         },
 
