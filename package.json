@@ -1,6 +1,6 @@
 {
   "name": "vuetable2-wrapper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "scripts": {
     "dev": "vue serve demo/App.vue",
