@@ -9,6 +9,7 @@
                   @vuetable:pagination-data="onPaginationData"
                   v-on="$listeners"
                   v-bind="$attrs"
+                  :css="CSS.table"
         >
             <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
                 <slot :name="slot" v-bind="scope"/>
