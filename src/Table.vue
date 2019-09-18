@@ -10,6 +10,7 @@
                   v-on="$listeners"
                   v-bind="$attrs"
                   :css="CSS.table"
+                  :http-options="httpOptions"
         >
             <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
                 <slot :name="slot" v-bind="scope"/>
@@ -78,6 +79,12 @@
             fields: {
                 type: Array,
                 required: true
+            },
+            httpOptions: {
+                type: Object,
+                default () {
+                    return {}
+                }
             },
             // Whether or not to show pagination info
             paginationInfo: {
